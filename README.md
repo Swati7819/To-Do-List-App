@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+# Todo App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple Todo App built with React that allows users to add, display, and delete todo items. This app demonstrates the use of React for state management, component design, and user interaction handling, along with data persistence using `localStorage`.
 
-## Available Scripts
+## Table of Contents
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Preview](#preview)
+- [Usage](#usage)
+- [Components](#components)
+  - [App Component](#app-component)
+  - [Header Component](#header-component)
+  - [Todos Component](#todos-component)
+  - [TodoItem Component](#todoitem-component)
+  - [AddTodo Component](#addtodo-component)
+  - [About Component](#about-component)
+- [Learnings](#learnings)
+- [License](#license)
 
-In the project directory, you can run:
+## Features
+- Add new todo items with a title and description.
+- Display a list of todo items.
+- Delete todo items.
+- Data persistence using `localStorage`.
+- Navigation between home and about pages using React Router.
 
-### `npm start`
+## Technologies Used
+- React
+- React Router
+- Bootstrap
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Preview
+![image](https://github.com/user-attachments/assets/7f175fbf-2555-44f4-9764-9504d20b1533)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Swati7819/To-Do-List-App.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd todo-app
+   ```
+3. Install the dependencies:
+   ```bash
+   npm install
+   ```
 
-### `npm test`
+## Usage
+1. Start the development server:
+   ```bash
+   npm start
+   ```
+2. Open your browser and navigate to `http://localhost:3000`.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Components
 
-### `npm run build`
+### App Component
+- Manages the state for the list of todos.
+- Initializes todos from `localStorage` to persist data across sessions.
+- Handles adding and deleting todos.
+- Uses React Router to define routes for the home and about pages.
+- Renders the `Header`, `AddTodo`, `Todos`, and `Footer` components on the home page.
+- Renders the `About` component on the about page.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Header Component
+- Displays the title of the app and includes links to the home and about pages.
+- Conditionally shows a search bar based on the `searchBar` prop.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Todos Component
+- Receives the list of todos and a delete function as props.
+- Maps over the todos array to render individual `TodoItem` components.
+- Displays a message if there are no todos.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### TodoItem Component
+- Displays a single todo item, including its title and description.
+- Provides a delete button that triggers the delete function passed from the `Todos` component.
 
-### `npm run eject`
+### AddTodo Component
+- Provides a form for adding new todos.
+- Manages the input state for the title and description using the `useState` hook.
+- Handles form submission, validates input, and calls the `addTodo` function.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### About Component
+- Displays static content about the app.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Learnings
+- Improved understanding of React hooks (`useState`, `useEffect`).
+- Gained experience with state management and data persistence.
+- Learned to use React Router for navigation.
+- Improved skills in component design and user interaction handling.
+- Gained practical experience with Bootstrap for styling.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Live Link
+https://66961986296a3f36a294527c--bright-dolphin-ba9405.netlify.app/
