@@ -16,7 +16,7 @@ A simple Todo App built with React that allows users to add, display, and delete
   - [AddTodo Component](#addtodo-component)
   - [About Component](#about-component)
 - [Learnings](#learnings)
-- [License](#license)
+- [Live link](#live-link)
 
 ## Features
 - Add new todo items with a title and description.
